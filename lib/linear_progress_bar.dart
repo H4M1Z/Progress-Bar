@@ -124,7 +124,7 @@ class _LinearProgressBarState extends State<LinearProgressBar>
   void didChangeDependencies() {
     super.didChangeDependencies();
 
-    //The context can't be inherited when we use MediaQuery in init state  so we initialize these variables in this method
+    //The context can't be inherited when we use MediaQuery in init state  so we initialize these Objects in this method
 
     //animation objects
     _animationForGolfBallPosition =
