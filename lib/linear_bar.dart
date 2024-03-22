@@ -7,12 +7,9 @@ class Hole extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final defaultBarSize = Size(MediaQuery.sizeOf(context).width * 0.8,
-        MediaQuery.sizeOf(context).height * 0.04);
     return CustomPaint(
       painter: HolePainter(),
-      size: Size(barWidth! * 0.06,
-          defaultBarSize.height - MediaQuery.sizeOf(context).height * 0.004),
+      size: Size(barWidth! * 0.055, MediaQuery.sizeOf(context).height * 0.03),
     );
   }
 }
