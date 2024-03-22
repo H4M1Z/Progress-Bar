@@ -28,7 +28,7 @@ class CircularProgressBarPainter extends CustomPainter {
       ..strokeCap = StrokeCap.round
       ..strokeWidth = width * 0.2;
 
-    //progress bar circle
+    // outer line
     canvas.drawArc(
         mainRectangle, degTorRad(350), degTorRad(200.5), true, outerbarPaint);
     //inner loading line

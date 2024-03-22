@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Made a Trasition for generating numbers to improve performance
 class NumbersTransition extends AnimatedWidget {
   const NumbersTransition(
       {required Animation<int> animation,

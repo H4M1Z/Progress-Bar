@@ -99,7 +99,7 @@ class _CircularProgressBarState extends State<CircularProgressBar>
     golfContainer = Container(
       alignment: Alignment.topRight,
       width: widget.size.width * 0.15,
-      height: widget.size.height, //0.25  0.33
+      height: widget.size.height * 0.98,
       color: Colors.transparent,
       child: RotationTransition(
           turns: _animationForRotatingBall,
@@ -134,7 +134,7 @@ class _CircularProgressBarState extends State<CircularProgressBar>
         child: Stack(
           alignment: Alignment.center,
           children: [
-            //Bar
+            //  Loading Bar
             CircularBar(
               duration: widget.duration,
               outerBarColor: widget.outerBarColor,
@@ -142,7 +142,7 @@ class _CircularProgressBarState extends State<CircularProgressBar>
               curve: widget.curve,
               size: widget.size,
             ),
-            //Grass image
+            // Widget in which the ball moves on the image
             MovingBall(
                 size: widget.size,
                 animationForBallOpacity: _animationForMovingBallOpacity,
@@ -156,19 +156,22 @@ class _CircularProgressBarState extends State<CircularProgressBar>
               ),
             ),
             // Current State
-            AnimatedCrossFade(
-              // (Made a number transition widget for generating numbers and for improving performance. There is also no built-in widget for this)
-              firstChild: NumbersTransition(
-                animation: _animationForPercentage,
-                textColor: widget.textColor,
-                textSize: widget.textSize,
+            Positioned(
+              top: widget.size.height * 0.55,
+              child: AnimatedCrossFade(
+                // (Made a number transition widget for generating numbers and for improving performance. There is also no built-in widget for this)
+                firstChild: NumbersTransition(
+                  animation: _animationForPercentage,
+                  textColor: widget.textColor,
+                  textSize: widget.textSize,
+                ),
+                secondChild: Text(
+                  completed,
+                  style: completedStyle,
+                ),
+                crossFadeState: _crossFadeState,
+                duration: const Duration(milliseconds: 300),
               ),
-              secondChild: Text(
-                completed,
-                style: completedStyle,
-              ),
-              crossFadeState: _crossFadeState,
-              duration: const Duration(milliseconds: 300),
             )
           ],
         ));

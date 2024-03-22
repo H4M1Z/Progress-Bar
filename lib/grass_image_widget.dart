@@ -19,6 +19,7 @@ class MovingBall extends StatelessWidget {
       alignment: Alignment.topCenter,
       child: Stack(
         children: [
+          //image on which the ball will move
           SizedBox(
             width: size.width,
             height: size.height * 0.55,

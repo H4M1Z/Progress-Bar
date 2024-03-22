@@ -50,13 +50,14 @@ class CenterLinearBarDesign extends StatelessWidget {
           child: Stack(
             alignment: Alignment.centerLeft,
             children: [
+              // hole made by custom painter in which the ball goes in...
               Align(
                 alignment: Alignment.centerRight,
                 child: Hole(
                   barWidth: barWidth,
                 ),
               ),
-              //Golf Ball
+              //The Ball that moves from left to right....
               AlignTransition(
                 alignment: animationForBallPosition,
                 child: ScaleTransition(

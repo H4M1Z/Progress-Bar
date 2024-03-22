@@ -29,6 +29,7 @@ class ProgressBar extends StatelessWidget {
   final Size? circularBarSize;
   @override
   Widget build(BuildContext context) {
+    // return the widget on the basis of enum
     return Center(
       child: progressBarType == ProgressBarType.linear
           ? LinearProgressBar(
