@@ -11,8 +11,8 @@ class Hole extends StatelessWidget {
         MediaQuery.sizeOf(context).height * 0.04);
     return CustomPaint(
       painter: HolePainter(),
-      size: Size(defaultBarSize.width - MediaQuery.sizeOf(context).width * 0.74,
-          defaultBarSize.height - MediaQuery.sizeOf(context).height * 0.008),
+      size: Size(barWidth! * 0.06,
+          defaultBarSize.height - MediaQuery.sizeOf(context).height * 0.004),
     );
   }
 }

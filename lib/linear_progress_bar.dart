@@ -127,10 +127,10 @@ class _LinearProgressBarState extends State<LinearProgressBar>
     //The context can't be inherited when we use MediaQuery in init state  so we initialize these variables in this method
 
     //animation objects
-    _animationForGolfBallPosition =
-        Tween<double>(begin: 0.0, end: widget.barWidth * 0.905).animate(
-            CurvedAnimation(
-                parent: _animationController, curve: widget.curve!));
+    _animationForGolfBallPosition = Tween<double>(
+            begin: widget.barWidth * -0.03, end: widget.barWidth * 0.925)
+        .animate(CurvedAnimation(
+            parent: _animationController, curve: widget.curve!));
     _animationForIcon = Tween<AlignmentGeometry>(
             begin: Alignment.bottomLeft, end: Alignment.bottomRight)
         .animate(CurvedAnimation(
