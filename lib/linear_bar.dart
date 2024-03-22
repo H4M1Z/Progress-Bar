@@ -9,7 +9,7 @@ class Hole extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomPaint(
       painter: HolePainter(),
-      size: Size(barWidth! * 0.055, MediaQuery.sizeOf(context).height * 0.03),
+      size: Size(barWidth! * 0.06, MediaQuery.sizeOf(context).height * 0.04),
     );
   }
 }

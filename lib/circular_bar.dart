@@ -8,10 +8,12 @@ class CircularBar extends StatefulWidget {
       required this.duration,
       this.curve,
       this.outerBarColor,
-      this.innerBarColor});
+      this.innerBarColor,
+      required this.size});
   final Duration duration;
   final Color? outerBarColor, innerBarColor;
   final Curve? curve;
+  final Size size;
 
   @override
   State<CircularBar> createState() => _CircularBarState();
@@ -25,8 +27,7 @@ class _CircularBarState extends State<CircularBar>
   late Animation<double> _animation;
 //Tween
   final tweenForLoadingLine = Tween<double>(begin: 0.0, end: 200.5);
-  //data members
-  static late final Size defaultBarSize;
+
   @override
   void initState() {
     super.initState();
@@ -43,13 +44,6 @@ class _CircularBarState extends State<CircularBar>
   }
 
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    defaultBarSize = Size(MediaQuery.sizeOf(context).width * 0.3,
-        MediaQuery.sizeOf(context).height * 0.2);
-  }
-
-  @override
   void dispose() {
     _animationController.dispose();
     super.dispose();
@@ -62,7 +56,8 @@ class _CircularBarState extends State<CircularBar>
           barAngle: _animation.value,
           outerbarColor: widget.outerBarColor,
           innerBarColor: widget.innerBarColor),
-      size: defaultBarSize,
+      size: Size(widget.size.width - MediaQuery.sizeOf(context).width * 0.03,
+          widget.size.height - MediaQuery.sizeOf(context).height * 0.05),
     );
   }
 }

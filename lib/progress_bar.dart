@@ -15,7 +15,8 @@ class ProgressBar extends StatelessWidget {
       this.curve = Curves.slowMiddle,
       this.innerBarColorForCircularBar,
       this.ballImage = 'assets/images/golfball.png',
-      this.iconForLinearBar});
+      this.iconForLinearBar,
+      this.circularBarSize});
   final Duration duration;
   final ProgressBarType progressBarType;
   final String? ballImage;
@@ -25,7 +26,7 @@ class ProgressBar extends StatelessWidget {
       innerBarColorForCircularBar;
   final double? textSize, iconSizeForLinearBar, linearBarWidth;
   final Curve? curve;
-
+  final Size? circularBarSize;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -49,6 +50,9 @@ class ProgressBar extends StatelessWidget {
               innerBarColor: innerBarColorForCircularBar,
               outerBarColor: outerBarColorForCircularBar,
               curve: curve,
+              size: circularBarSize ??
+                  Size(MediaQuery.sizeOf(context).width * 0.3,
+                      MediaQuery.sizeOf(context).height * 0.23),
             ),
     );
   }
