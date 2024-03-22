@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_progress_bar_assignment/linear_progress_bar.dart';
 
 class MovingBall extends StatelessWidget {
   const MovingBall(
