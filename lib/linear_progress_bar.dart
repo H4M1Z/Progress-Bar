@@ -143,7 +143,7 @@ class _LinearProgressBarState extends State<LinearProgressBar>
 
     loadingStyle = TextStyle(
         color: widget.textColor ?? Colors.black,
-        fontSize: widget.textSize ?? MediaQuery.sizeOf(context).width * 0.04,
+        fontSize: widget.textSize ?? 18,
         fontWeight: FontWeight.bold);
   }
 
