@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_progress_bar_assignment/linear_bar.dart';
+import 'package:flutter_progress_bar_assignment/linear_bar_design.dart';
 
 class CenterLinearBarDesign extends StatelessWidget {
   const CenterLinearBarDesign(

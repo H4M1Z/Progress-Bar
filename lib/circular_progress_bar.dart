@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_progress_bar_assignment/circular_bar.dart';
+import 'package:flutter_progress_bar_assignment/circular_bar_design.dart';
 import 'package:flutter_progress_bar_assignment/grass_image_widget.dart';
 import 'package:flutter_progress_bar_assignment/numbers_transition.dart';
 
